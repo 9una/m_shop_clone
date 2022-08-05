@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 ie6" lang="ko-KR"><![ingif]-->
+<!--[if IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 ie7" lang="ko-KR"><![ingif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9 ie8" lang="ko-KR"><![ingif]-->
+<!--[if IE 9]><html class="lt-ie10 ie9" lang="ko-KR"><![ingif]-->
+<!--[if !IE]><!--><html lang="ko-KR"><!--<![ingif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<title>빅커피 Mobile 마크업리스트</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<script type="text/javascript" src="assets/js/common.min.js"></script>
+	<style>
+		*{-webkit-text-size-adjust:none;}
+		html,body{width:100%;height:100%; min-width:800px;}
+		html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, ul, li, fieldset, form, label, leging, table, caption, tbody, tfoot, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{margin:0; padding:0; outline:0; font-family:NanumGothic,'나눔고딕',Dotum,'돋움',applegothic,sans-serif; font-size:13px; color:#555; /*vertical-align:baseline;*/}
+		body{line-height:1.2em; border:0;}
+		strong, em, span, wbr, a{display:inline-block;}
+		span{margin:0; padding:0; outline:0;}
+		hr{display:none}
+		ol, ul, dl, dt, dd{list-style:none outside none; padding:0; margin:0;}
+		fieldset, img, table, caption, tbody, tfoot, thead, tr, th, td, button, hr{border:0;}
+		address, caption, cite, code, dfn, em, strong, th, var{font-style: normal;}
+		img{vertical-align:middle;}
+		a{cursor:pointer; text-decoration:none; color:#666;}
+		table{border-collapse:collapse;}
+		#wrap{padding:12px;}
+		#header{margin-bottom:20px;}
+		#header::after{content:''; clear:both; display:block;}
+		#header>h1{float:left; font-size:28px; color:#1a1a1a; padding-top:15px;}
+		#header>div{float:right;}
+		#header>div>p{font-size:11px; color:#888; text-align:right;}
+		div.box{border:1px solid #dedede; background:#f1f1f1; padding:12px 14px; margin-bottom:10px;}
+		h3{font-size:14px; color:#333; margin-bottom:13px;}
+		h4{font-size:14px; color:#333; margin:25px 0 8px 5px;}
+		ol.atten>li{margin-bottom:8px; padding:0; line-height:160%;}
+		ol.atten>li:last-child{margin-bottom:0;}
+		table.htmllist th,table.htmllist td{border:1px solid #ccc;}
+		table.htmllist .line th,
+		table.htmllist .line td{border-top-width:2px;}
+		table.htmllist tr:first-child td{text-align:center; font-weight:bold; border-bottom:1px solid #111 !important; height:30px; color:#000 !important; font-size:13px !important;}
+		table.htmllist th{padding:5px 6px; text-align:left; border-bottom:2px solid #4e80e8 !important; height:32px; background-color:#f3f4f8;}
+		table.htmllist th.depth2{padding: 2px 18px; text-align:left; border-bottom:1px solid #333 !important; height:30px; font-size: 12px; background-color: #fff}
+		table.htmllist td{padding:5px 10px;}
+		table.htmllist td:last-child{color:#888; font-size:12px;}
+		table.htmllist td>a{display:block; width:100%; height:26px; line-height:26px; text-align:center; color:#fff; font-size:11px; font-weight:bold; vertical-align:middle; background-color:#5183eb; border:1px solid #3f6fd3; border-radius:3px;}
+		table.htmllist td>a:hover{background-color:#3f6fd3; line-height:28px;}
+		table.htmllist tr:hover>td{background-color:#fffad2;}
+		table.htmllist tr td{background-color:#eee;}
+		table.htmllist tr.done td{background-color:#fff;}
+		table.htmllist tr.important td{background-color:#ff0000;color:#fff;}
+		table.htmllist tr.important td:nth-child(2):before{content:"01.";}
+		table.htmllist tr.v8.done td{background-color:rgba(0,0,0,0.8);color:#fff;}
+		table.htmllist td.ing{text-align:center; font-size:12;}
+		table.htmllist td.end{text-align:center; font-size:12; font-weight:bold; background-color:#b8bbbf; color:#1a1a1a; }
+		/* .total{padding:10px 5px 20px} */
+		.total .tit_txt{padding-left:10px;margin-left:10px;border-left:1px solid #ddd;}
+		.total h3 + .tit_txt{padding-left:0;margin-left:0;border-left:none;}
+		.total_page_num{font-size:18px;color:#5183eb;}
+		.cntTotal{position:absolute;top:-9999px;left:-9999px;}
+		.text-center {text-align: center; }
+	</style>
+</head>
+
+<body>
+<div id="wrap">
+	<div id="header">
+		<h1>빅커피 Mobile 마크업리스트 <span class="cntTotal">(<span class="total"></span>pages)</span></h1>
+	</div>
+	<h4>코딩 목록</h4>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="htmllist">
+		<colgroup>
+			<col style="width: 50px;">
+			<col style="width: 15%;">
+			<col style="width: calc(30% - 50px);">
+			<col style="width: 40%;">
+			<!-- <col> -->
+			<col style="width: 15%;">
+		</colgroup>	
+	
+		<thead class="head">
+			<td>No.</td>
+			<td>1 Depth</td>
+			<td>2 Depth</td>
+			<!-- <td>3 Depth</td> -->
+			<td>Path</td>
+			<td>View</td>
+		</thead>
+
+		<tbody>
+			<tr>
+				<th colspan="6">빅커피 Mobile 화면</th>
+			</tr>
+			
+			<!-- 메인 -->
+			<tr class="line done">
+				<td rowspan="1" class="text-center">1</td>
+				<td rowspan="1" class="text-center">메인</td>
+				<td>메인</td>
+				<td>index.html</td>
+				<td><a href="./index.html" target="_blank">View</a></td>
+			</tr>
+
+			<!-- 로그인 -->
+			<tr class="line done">
+				<td rowspan="2" class="text-center">2</td>
+				<td rowspan="2" class="text-center">로그인</td>
+				<td>로그인</td>
+				<td>login.html</td>
+				<td><a href="./login.html" target="_blank">View</a></td>
+			</tr>
+			<tr class="line done">
+				<td>회원가입</td>
+				<td>join.html</td>
+				<td><a href="./join.html" target="_blank">View</a></td>
+			</tr>
+
+			<!-- 상품 -->
+			<tr class="line done">
+				<td rowspan="2" class="text-center">3</td>
+				<td rowspan="2" class="text-center">상품</td>
+				<td>상품 카테고리</td>
+				<td>goods.html</td>
+				<td><a href="./goods.html" target="_blank">View</a></td>
+			</tr>
+			<tr class="line done">
+				<td>상품 상세보기</td>
+				<td>goods-view.html</td>
+				<td><a href="./goods-view.html" target="_blank">View</a></td>
+			</tr>
+
+			<!-- 장바구니 -->
+			<tr class="line done">
+				<td rowspan="2" class="text-center">4</td>
+				<td rowspan="2" class="text-center">장바구니</td>
+				<td>장바구니</td>
+				<td>cart.html</td>
+				<td><a href="./cart.html" target="_blank">View</a></td>
+			</tr>
+			<tr class="line done">
+				<td>주문하기</td>
+				<td>order.html</td>
+				<td><a href="./order.html" target="_blank">View</a></td>
+			</tr>
+		</tbody>
+	</table>
+	
+</div>
+
+<script>
+	var totalPageNum = 0;
+	$('tbody').each(function(idx){	
+		var titTxt = $('tbody').eq(idx).find('th').text();
+		$('.total').append('<span class="tit_txt">' + titTxt + ': </span>')	
+		$(this).find('tr').each(function(i){
+			$(this).find('td:first-child').text(i);
+			num = $(this).filter(':last-child').find('td:first-child').text();
+		});
+		$('.total').append('<strong>' + num + '</strong>');
+		totalPageNum += parseInt(num);
+	});
+	$('.total h3').append('<strong class="total_page_num">' + totalPageNum + '</strong>');
+
+	var totalPage = 0;
+	$(".cnt").each(function(){
+		$(this).children("em").text( $(this).parent().parent().parent().children("tr").length-1 )
+		totalPage = totalPage + $(this).parent().parent().parent().children("tr").length-1
+	});
+
+	$(".total").text( totalPage );
+
+</script>
+
+</body>
+</html>
