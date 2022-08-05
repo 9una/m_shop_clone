@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/reset.css">
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <title>장바구니</title>
+</head>
+<body>
+    <header id="header"></header>
+    <!-- header - e -->
+    <div id="container" class="cart">
+        <div class="location">
+            <div class="wrapper">
+                <a href="cart.html" class="location-link">장바구니</a>
+            </div>
+        </div>
+        <section>
+            <div class="wrapper">
+                <form name="cartform" id="cartform" method="post" class="cartform" action="/Page" onsubmit="return false;">
+                    <input type="hidden" name="cmd" value="cart">
+                    <!--장바구니 목록-->
+                    <div id="basket" class="basket">
+                        <!-- data -->
+                        <div class="basket-title">
+                            <h3>업체배송 상품</h3>
+                            <div class="delivery">
+                                <p>배송비 조건 <i class="q_icon">?</i></p>
+                                <div>
+                                    <span>2,500</span>원
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row data">
+                            <button type="button" class="edit-btn">옵션/수량 변경</button>
+                            <div class="item">
+                                <div class="check">
+                                    <input type="checkbox" name="buy" value="260" checked="" onclick="javascript:basket.checkItem();">
+                                </div>
+                                <div class="img">
+                                    <img src="./img/goods/goods-view-1.jpg" alt="앤틱 크라프트 캐리어 50개">
+                                </div>
+                                <div class="text">
+                                    <div class="p_name">
+                                        <span>앤틱 크라프트 캐리어 50개</span>
+                                        <span class="coupon">
+                                            <img src="img/coupon.png" alt="쿠폰이미지" />
+                                            <input type="hidden" name="p_coupon" value="2000">
+                                            <b>2,000원</b> 할인
+                                        </span>
+                                    </div>
+                                    <div class="price">
+                                        <div class="basketprice">
+                                            <input type="hidden" name="p_price" class="p_price" value="11500">
+                                            11,500원
+                                        </div>
+                                        <div class="num">
+                                            <p>주문수량 <span class="p_num">2</span>개</p>
+                                        </div>
+                                        <div class="sum">23,000원</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row data">
+                            <button type="button" class="edit-btn">옵션/수량 변경</button>
+                            <div class="item">
+                                <div class="check">
+                                    <input type="checkbox" name="buy" value="260" checked="" onclick="javascript:basket.checkItem();">
+                                </div>
+                                <div class="img">
+                                    <img src="./img/goods/goods-list-2.jpg" alt="세미 베버시티 고구마라떼 페이스트 1kg">
+                                </div>
+                                <div class="text">
+                                    <div class="pname">
+                                        <span>세미 베버시티 고구마라떼 페이스트 1kg</span>
+                                    </div>
+                                    <div class="price">
+                                        <div class="basketprice">
+                                            <input type="hidden" name="p_price" class="p_price" value="6800">
+                                            6,800원
+                                        </div>
+                                        <div class="num">
+                                            <p>주문수량 <span class="p_num">1</span>개</p>
+                                        </div>
+                                        <div class="sum">6,800원</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row data">
+                            <button type="button" class="edit-btn">옵션/수량 변경</button>
+                            <div class="item">
+                                <div class="check">
+                                    <input type="checkbox" name="buy" value="260" checked="" onclick="javascript:basket.checkItem();">
+                                </div>
+                                <div class="img">
+                                    <img src="./img/goods/goods-list-4.jpg" alt="세미 베버시티 고구마라떼 페이스트(스틱) 80g 12개입/1팩">
+                                </div>
+                                <div class="text">
+                                    <div class="pname">
+                                        <span>세미 베버시티 고구마라떼 페이스트(스틱) 80g 12개입/1팩</span>
+                                    </div>
+                                    <div class="price">
+                                        <div class="basketprice">
+                                            <input type="hidden" name="p_price" class="p_price" value="9600">
+                                            9,600원
+                                        </div>
+                                        <div class="num">
+                                            <p>주문수량 <span class="p_num">1</span>개</p>
+                                        </div>
+                                        <div class="sum">9,600원</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row data">
+                            <button type="button" class="edit-btn">옵션/수량 변경</button>
+                            <div class="item">
+                                <div class="check">
+                                    <input type="checkbox" name="buy" value="260" checked="" onclick="javascript:basket.checkItem();">
+                                </div>
+                                <div class="img">
+                                    <img src="./img/goods/goods-list-6.jpg" alt="세미 베버시티 녹차라떼 500g">
+                                </div>
+                                <div class="text">
+                                    <div class="pname">
+                                        <span>세미 베버시티 녹차라떼 500g</span>
+                                    </div>
+                                    <div class="price">
+                                        <div class="basketprice">
+                                            <input type="hidden" name="p_price" class="p_price" value="6800">
+                                            6,800원
+                                        </div>
+                                        <div class="num">
+                                            <p>주문수량 <span class="p_num">3</span>개</p>
+                                        </div>
+                                        <div class="sum">20,400원</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row empty">
+                            <div>장바구니에 담겨있는 상품이 없습니다.</div>
+                        </div>
+                    </div>
+                    <!--총 내역-->
+                    <div class="cart__price">
+                        <div class="price-total">
+                            <div class="calc">
+                                <div class="item-all-price">
+                                    <p class="sum_p_price">상품합계<br>
+                                    <span>59,800</span>원</p>
+                                </div>
+                                <div class="coupon-use">
+                                    <p>쿠폰할인<br>
+                                    <input type="hidden" name="coupon_p" class="coupon_p" value="2000">
+                                    <span class="coupon_price">2,000</span>원</p>
+                                </div>
+                                <div class="delivery-plus">
+                                    <p>배송비<br>
+                                    <input type="hidden" name="delivery_p" class="delivery_p" value="2500">
+                                    <span class="delivery_price">2,500</span>원</p>
+                                </div>
+                                <div class="price-last">
+                                    <p>합계금액<br>
+                                    <span>60,300</span>원</p>
+                                </div>
+                            </div>
+                            <div class="usable-point">
+                                <p><b>추가 예상 할인액</b><br>(쿠폰/마일리지/예치금)</p>
+                                <span>- <b>4,500</b>원</span>
+                            </div>
+                        </div>
+                        <div class="price-btn">
+                            <button type="button" onclick="javascript:basket.delCheckedItem();">선택상품 삭제</button>
+                            <a href="#">선택상품 주문</a>
+                            <a href="order.html" id="goOrder">전체주문</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <!-- container - e -->
+    <footer id="footer"></footer>
+    <!-- footer - e -->
+
+
+    <!-- js -->
+    <script src="https://kit.fontawesome.com/3701dcbbf4.js" crossorigin="anonymous" ></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    
+    <script src="./js/index.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+</html>

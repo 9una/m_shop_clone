@@ -1,0 +1,293 @@
+/* media query */
+.login section,
+.join section {
+  padding-bottom: 30px !important;
+}
+.login section .login-box,
+.login section .join-box,
+.join section .login-box,
+.join section .join-box {
+  width: 100%;
+}
+
+.login section .login-box {
+  padding: 30px 10px 0;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.login section .login-box .login-form form {
+  gap: 10px 15px;
+}
+.login section .login-box .login-form form .text-box {
+  margin-bottom: 10px;
+}
+.login section .login-box .login-form form .text-box input {
+  width: 100%;
+  padding: 10px 8px;
+  border: 1px solid #dbdbdb;
+}
+.login section .login-box .login-form form .text-box input:first-child {
+  margin-bottom: 5px;
+}
+.login section .login-box .login-form form .check-box {
+  display: flex;
+  align-items: center;
+}
+.login section .login-box .login-form form .check-box input {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+.login section .login-box .login-form form .check-box label {
+  margin-right: 15px;
+}
+.login section .login-box .login-form form .login-btn {
+  background: #e4130c;
+  width: 100%;
+  margin: 15px 0 10px;
+  padding: 8px;
+  font-size: 1.2em;
+  color: white;
+  font-weight: bold;
+}
+.login section .login-box .login-form form .login-btn:hover {
+  background: #d3100a;
+}
+.login section .login-box .login-form form a {
+  display: flex;
+  justify-content: flex-end;
+  font-style: italic;
+  color: #0479c9;
+  letter-spacing: 0.5px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.login section .login-box .sns-login {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dbdbdb;
+}
+.login section .login-box .sns-login button {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #dbdbdb;
+}
+.login section .login-box .sns-login button:last-child {
+  border-bottom: 0;
+}
+.login section .login-box .sns-login button i {
+  border-right: 1px solid #dbdbdb;
+  width: 60px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login section .login-box .sns-login button:nth-child(1) i {
+  font-size: 2em;
+  color: #1ec900;
+}
+.login section .login-box .sns-login button:nth-child(2) i {
+  font-size: 1.4em;
+  color: #492116;
+}
+.login section .login-box .sns-login button:nth-child(3) i {
+  font-size: 1.6em;
+  color: #385995;
+}
+.login section .login-box .sns-login button:nth-child(4) i {
+  font-size: 1.8em;
+  color: #333;
+}
+.login section .login-box .sns-login button span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #aaa;
+}
+.login section .login-box .non-member {
+  border-top: 2px dotted #d8d6d6;
+  margin-top: 20px;
+  padding-top: 15px;
+}
+.login section .login-box .non-member form {
+  display: flex;
+  flex-direction: column;
+}
+.login section .login-box .non-member form > div:first-child {
+  display: flex;
+  align-items: center;
+  font-size: 0.95em;
+}
+.login section .login-box .non-member form > div:first-child p {
+  margin-right: 10px;
+}
+.login section .login-box .non-member form > div:first-child input[type=checkbox] {
+  margin-left: 8px;
+  width: 18px;
+  height: 18px;
+}
+.login section .login-box .non-member form .order-box {
+  padding-top: 20px;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
+.login section .login-box .non-member form .order-box.active {
+  display: flex;
+}
+.login section .login-box .non-member form .order-box input {
+  width: 100%;
+  padding: 10px 8px;
+  border: 1px solid #dbdbdb;
+}
+.login section .login-box .non-member form .order-box button {
+  padding: 8px;
+  font-size: 1.2em;
+  margin: 10px 0;
+  font-weight: bold;
+  background: #e4130c;
+  color: white;
+}
+.login section .join-text {
+  text-align: center;
+}
+.login section .join-text a {
+  margin-left: 5px;
+  display: inline;
+  color: #0479c9;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.join section {
+  padding-top: 15px;
+}
+.join section .join-box {
+  margin-bottom: 50px;
+}
+.join section .join-box .join-type {
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.join section .join-box .join-type span {
+  font-size: 1.1em;
+}
+.join section .join-box .join-type span.active {
+  color: #e4130c;
+}
+.join section .join-box .join-type span:first-child {
+  margin-right: 60px;
+}
+.join section .join-box .join-form {
+  margin-top: 10px;
+}
+.join section .join-box .join-form > div {
+  display: none;
+}
+.join section .join-box .join-form > div form .info-required {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.join section .join-box .join-form > div form .info-required input,
+.join section .join-box .join-form > div form .info-required button {
+  padding: 10px;
+  border: 1px solid #dbdbdb;
+}
+.join section .join-box .join-form > div form .info-required label {
+  margin: 5px 5px 10px;
+  color: blue;
+}
+.join section .join-box .join-form > div form .info-required .password-text {
+  display: none;
+  margin: 2px 5px 8px;
+}
+.join section .join-box .join-form > div form .info-required .password-text.wrong {
+  color: #e4130c;
+}
+.join section .join-box .join-form > div form .info-required .password-text.right {
+  color: blue;
+}
+.join section .join-box .join-form > div form .info-required .row-cont {
+  grid-column: span 2;
+}
+.join section .join-box .join-form > div form .info-required input[type=number]::-webkit-outer-spin-button,
+.join section .join-box .join-form > div form .info-required input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.join section .join-box .join-form > div form .for-business {
+  display: flex;
+  flex-direction: column;
+}
+.join section .join-box .join-form > div form .for-business p {
+  text-align: center;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  color: #666;
+}
+.join section .join-box .join-form > div form .for-business p::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: #e4130c;
+  margin-right: 5px;
+}
+.join section .join-box .join-form > div form .for-business div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-around;
+  gap: 5px;
+  padding: 0 10px;
+}
+.join section .join-box .join-form > div form .for-business div span {
+  display: flex;
+  align-items: center;
+}
+.join section .join-box .join-form > div form .for-business div span input {
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+}
+.join section .join-box .join-form > div.active {
+  display: block;
+}
+.join section .join-box .join-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px 0;
+  background: #e4130c;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.join section .join-box .join-btn:disabled {
+  background: #bdbdbd;
+}
+.join section .join-box .join-text {
+  color: #888;
+  line-height: 1.4;
+  text-align: left;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+.join section .join-box .join-text a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+/* media-query */
+
+/*# sourceMappingURL=login_join.css.map */

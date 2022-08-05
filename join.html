@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/reset.css">
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <title>회원가입</title>
+</head>
+<body>
+    <header id="header"></header>
+    <!-- header - e -->
+    <div id="container" class="join">
+        <div class="location">
+            <div class="wrapper">
+                <a href="join.html" class="location-link">회원가입(정보입력)</a>
+            </div>
+        </div>
+        <section>
+            <h3 class="skip">회원가입</h3>
+            <div class="wrapper">
+                <div class="join-box">
+                    <div class="join-type">
+                        <span class="business active">사업자회원</span>
+                        <span class="customer">개인회원</span>
+                    </div>
+                    <div class="join-form">
+                        <div class="join__business active">
+                            <form>
+                                <div class="info-required">
+                                    <input type="text" placeholder="추천코드가 있을 경우 꼭 입력해주세요." id="recommend" class="row-cont"/>
+                                    <label for="recommend" class="row-cont">※ 추천코드가 없는 경우는 입력하지 않으셔도 됩니다.</label>
+                                    <input type="number" class="row-cont" required placeholder="사업자번호 ( - 없이 입력하세요.)">
+                                    <input type="text" required placeholder="아이디(이메일주소)" id="emailaddress">
+                                    <select name="address">
+                                        <option>직접입력</option>
+                                        <option>naver.com</option>
+                                        <option>hanmail.net</option>
+                                        <option>google.com</option>
+                                    </select>
+                                    <input type="password" required placeholder="비밀번호(영문 숫자 특수문자 2가지 이상 10~16자 이내)" class="row-cont">
+                                    <span class="password-text wrong">최소 10자 이상을 적어주세요</span>
+                                    <input type="password" required placeholder="비밀번호 확인" class="row-cont">
+                                    <span class="password-text wrong">비밀번호가 다릅니다.</span>
+                                    <input type="text" required placeholder="이름" class="row-cont">
+                                    <input type="number" required placeholder="휴대폰 번호 ( - 없이 숫자만 입력해주세요.)" class="row-cont">
+                                </div>
+                                <div class="for-business">
+                                    <p>매장유형을 선택해주세요.</p>
+                                    <div>
+                                        <span>
+                                            <input type="radio" id="cafe" name="businesstype" checked>
+                                            <label for="cafe">Cafe/커피전문점</label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" id="bakery" name="businesstype">
+                                            <label for="bakery">베이커리</label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" id="pcroom" name="businesstype">
+                                            <label for="pcroom">PC방</label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" id="pantry" name="businesstype">
+                                            <label for="pantry">탕비실</label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" id="restaurant" name="businesstype">
+                                            <label for="restaurant">음식점</label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" id="etc" name="businesstype">
+                                            <label for="etc">기타</label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <button type="submit" class="join-btn">동의하고 가입하기</button>
+                            </form>
+                        </div>
+                        <div class="join__customer">
+                            <form>
+                                <div class="info-required">
+                                    <input type="text" required placeholder="아이디(이메일주소)" id="email">
+                                    <select name="address">
+                                        <option>직접입력</option>
+                                        <option>naver.com</option>
+                                        <option>hanmail.net</option>
+                                        <option>google.com</option>
+                                    </select>
+                                    <input type="password" required placeholder="비밀번호(영문 숫자 특수문자 2가지 이상 10~16자 이내)" class="row-cont">
+                                    <span class="password-text wrong">최대 16자 까지로 적어주세요</span>
+                                    <input type="password" required placeholder="비밀번호 확인" class="row-cont">
+                                    <span class="password-text right">비밀번호가 같습니다.</span>
+                                    <input type="text" required placeholder="이름" class="row-cont">
+                                    <input type="number" required placeholder="휴대폰 번호 ( - 없이 숫자만 입력해주세요.)" class="row-cont">
+                                </div>
+                                <button type="submit" class="join-btn">동의하고 가입하기</button>
+                            </form>
+                        </div>
+                    </div>
+                    <p class="join-text">
+                        <a href="#">이용약관</a>, <a href="#">개인정보 수집 및 이용</a>, <a href="#">정보/이벤트 수신(메일, SMS)동의</a>, <a href="#">주문/결제 및 배송서비스</a>, <a href="#">공급사 상품 판매 및 배송을 위한 개인정보 제3자 제공 동의</a> 제공 내용을 확인하였으며, 동의합니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- container - e -->
+    <footer id="footer"></footer>
+    <!-- footer - e -->
+
+
+    <!-- js -->
+    <script src="https://kit.fontawesome.com/3701dcbbf4.js" crossorigin="anonymous" ></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    
+    <script src="./js/index.js"></script>
+    <script src="./js/header.js"></script>
+
+    <script type="text/javascript">
+        //회원가입 유형
+        const joinType = document.querySelectorAll('.join-type span');
+        const joinForm = document.querySelectorAll('.join-form > div');
+
+        for(let i = 0; i < joinType.length; i++){
+            joinType[i].addEventListener("click", (event)=>{
+                let j = 0,
+                    k = 0;
+                while(j < joinType.length && k < joinType.length){
+                    joinType[j++].classList.remove('active');
+                    joinForm[k++].classList.remove('active');
+                }
+                joinType[i].classList.add('active');
+                joinForm[i].classList.add('active');
+            });
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,231 @@
+/* media query */
+#container {
+  padding-top: 102px;
+}
+#container section {
+  padding-bottom: 50px;
+  position: relative;
+  border-bottom: 10px solid #dbdbdb;
+}
+#container .section__title {
+  font-size: 1.8em;
+  text-align: center;
+  padding: 40px 0 30px;
+  margin: 0 auto;
+  word-break: keep-all;
+}
+
+.main .hero-banner {
+  border: 0 !important;
+  padding-bottom: 0 !important;
+  width: 100%;
+  max-width: 768px;
+  margin: auto;
+}
+.main .hero-banner .slide-banner {
+  width: 100%;
+  overflow: hidden;
+}
+.main .hero-banner .slide-banner .slide-list {
+  width: 300vw;
+  display: flex;
+  transition: transform 0.3s;
+}
+.main .hero-banner .slide-banner .slide-list .slide-item {
+  display: flex;
+  width: 100%;
+}
+.main .hero-banner .slide-banner .slide-list .slide-item a {
+  width: 100%;
+  height: 100%;
+}
+.main .hero-banner .pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translatex(-50%);
+  display: flex;
+  gap: 7px;
+}
+.main .hero-banner .pagination .dot button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e9e9e9;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+.main .hero-banner .pagination .dot.dot_active button {
+  background: #222;
+}
+.main .event-banner .main-event {
+  position: relative;
+}
+.main .event-banner .main-event .event-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  gap: 5px;
+}
+.main .event-banner .main-event .event-wrap div a {
+  width: 100%;
+}
+.main .event-banner .more-btn {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  text-align: center;
+  color: #444;
+  margin-top: 20px;
+  border: 1px solid black;
+}
+.main .event-banner .more-btn i {
+  font-size: 0.9em;
+}
+.main .event-banner .experience-event {
+  margin-top: 30px;
+}
+.main .event-banner .experience-event div {
+  margin-bottom: 10px;
+}
+.main .main-product .products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 15px;
+}
+.main .main-product .products .item .product__img {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  margin-bottom: 15px;
+  border: 1px solid #dbdbdb;
+}
+.main .main-product .products .item .product__img img {
+  width: 90%;
+  height: 90%;
+  margin: 5%;
+  position: absolute;
+  object-fit: cover;
+}
+.main .main-product .products .item .product__name {
+  margin-bottom: 5px;
+  line-height: 1.4;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+}
+.main .main-product .products .item .product__price {
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+}
+.main .main-product .products .item .product__price b {
+  font-size: 1.25em;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+.main .best-product {
+  padding-bottom: 0 !important;
+}
+.main .best-product article {
+  border-bottom: 10px solid #dbdbdb;
+  margin-bottom: 40px;
+}
+.main .best-product article:last-child {
+  margin-bottom: 0;
+  border: 0;
+}
+.main .best-product article .link-btn {
+  border: 1px solid black;
+  padding: 3px 25px;
+  border-radius: 30px;
+  font-size: 1.1em;
+  text-align: center;
+}
+.main .best-product article .link-btn img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  object-fit: contain;
+}
+.main .best-product article .best__hashtag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0 20px;
+  gap: 0 15px;
+}
+.main .best-product article .best__hashtag a {
+  padding: 5px 0;
+  font-size: 0.95em;
+}
+.main .best-product article .best__banner {
+  padding: 0;
+}
+.main .best-product article .best__banner p {
+  font-size: 1.8em;
+  font-weight: 100;
+  margin: 5px 0 20px;
+}
+.main .best-product article .best__banner h4 {
+  font-size: 2em;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+.main .best-product article .best__list {
+  padding: 30px 0;
+}
+.main .best-product article .best__list ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px 15px;
+}
+.main .best-product article .best__list ul li a .product__img {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  margin-bottom: 15px;
+  border: 1px solid #dbdbdb;
+}
+.main .best-product article .best__list ul li a .product__img img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+.main .best-product article .best__list ul li a .product__name {
+  margin-bottom: 5px;
+  line-height: 1.4;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+}
+.main .best-product article .best__list ul li a span {
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+}
+.main .best-product article .best__list ul li a span b {
+  font-size: 1.25em;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+.go-top {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #bbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.go-top a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #888;
+}
+.go-top a i {
+  margin-top: -5px;
+}
+
+/* media-query */
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/reset.css">
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <title>로그인</title>
+</head>
+<body>
+    <header id="header"></header>
+    <!-- header - e -->
+    <div id="container" class="login">
+        <div class="location">
+            <div class="wrapper">
+                <a href="login.html" class="location-link">로그인</a>
+            </div>
+        </div>
+        <section>
+            <h3 class="skip">로그인</h3>
+            <div class="wrapper">
+                <div class="login-box">
+                    <div class="login-form">
+                        <form>
+                            <div class="text-box">
+                                <input type="text" required placeholder="아이디"/>
+                                <input type="password" required placeholder="비밀번호"/>
+                            </div>
+                            <div class="check-box">
+                                <input type="checkbox" id="loginIng" class="typecheck">
+                                <label for="loginIng">로그인 상태 유지</label>
+                                <input type="checkbox" id="remember" class="typecheck">
+                                <label for="remember">아이디 저장</label>
+                            </div>
+                            <button type="submit" class="login-btn">로그인</button>
+                            <a href="#"><i>아이디/비밀번호 찾기 →</i></a>
+                        </form>
+                    </div>
+                    <div class="sns-login">
+                        <button type="button">
+                            <i class="naver-icon" style="font-weight:bold;">N</i>
+                            <span>네이버 아이디로 로그인</span>
+                        </button>
+                        <button type="button">
+                            <i class="fas fa-comment"></i>
+                            <span>카카오 아이디로 로그인</span>
+                        </button>
+                        <button type="button">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>페이스북 아이디로 로그인</span>
+                        </button>
+                        <button type="button">
+                            <i class="fab fa-apple"></i>
+                            <span>Apple 아이디로 로그인</span>
+                        </button>
+                    </div>
+                    <div class="non-member">
+                        <form>
+                            <div>
+                                <p>비회원으로 주문하셨나요?</p>
+                                <label for="non-memeber">비회원주문조회하기</label>
+                                <input type="checkbox" id="non-memeber"/>
+                            </div>
+                            <div class="order-box">
+                                <input type="text" placeholder="주문자명" required>
+                                <input type="text" placeholder="주문번호" required>
+                                <button type="submit">주문조회</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <p class="join-text">아직 회원이 아니세요? <a href="join.html">회원가입 하기</a></p>
+            </div>
+        </section>
+    </div>
+    <!-- container - e -->
+    <footer id="footer"></footer>
+    <!-- footer - e -->
+
+
+    <!-- js -->
+    <script src="https://kit.fontawesome.com/3701dcbbf4.js" crossorigin="anonymous" ></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    
+    <script src="./js/index.js"></script>
+    <script src="./js/header.js"></script>
+
+    <script type="text/javascript">
+        //로그인
+        const nonMemberCheck = document.getElementById('non-memeber');
+        const nonMemberBox = document.querySelector('.order-box');
+        nonMemberCheck.addEventListener('change', ()=>{
+            nonMemberBox.classList.toggle('active');
+        })
+    </script>
+    
+</body>
+</html>

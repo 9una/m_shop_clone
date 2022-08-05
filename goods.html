@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/reset.css">
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <title>상품목록</title>
+</head>
+<body>
+    <header id="header"></header>
+    <!-- header - e -->
+    <div id="container" class="goods">
+        <div class="location">
+            <div class="wrapper">
+                <a href="goods.html" class="location-link">파우더/페이스트</a>
+            </div>
+        </div>
+        <section>
+            <h3 class="skip">카테고리 필터</h3>
+            <div class="wrapper">
+                <div class="goods__category">
+                    <a href="#;" class="category__secondary">녹차(그린티) (155)</a>
+                    <a href="#;" class="category__secondary">홍차(블랙티) (80)</a>
+                    <a href="#;" class="category__secondary">초콜릿 (231)</a>
+                    <a href="#;" class="category__secondary">바닐라 (60)</a>
+                    <a href="#;" class="category__secondary">아이스티/에이드 (125)</a>
+                    <a href="#;" class="category__secondary">곡물/견과류 (72)</a>
+                    <a href="#;" class="category__secondary">요거트 (121)</a>
+                    <a href="#;" class="category__secondary">고구마 (75)</a>
+                    <a href="#;" class="category__secondary">호박/밤 (26)</a>
+                    <a href="#;" class="category__secondary">그 외 파우더 (309)</a>
+                </div>
+                <div class="goods__filter" id="filter">
+                    <div class="filter-type">
+                        <button type="button">브랜드</button>
+                        <button type="button">구매단위</button>
+                    </div>
+                    <div class="filter-cont">
+                        <div class="cont">
+                            <button type="button">빅트레인</button>
+                            <button type="button">베버시티</button>
+                            <button type="button">립톤</button>
+                            <button type="button">투썸플레이스</button>
+                            <button type="button">기라델리</button>
+                            <button type="button">위드고(애니타임)</button>
+                            <button type="button">아임요</button>
+                            <button type="button">포모나</button>
+                            <button type="button">베오베</button>
+                            <button type="button">타코</button>
+                            <button type="button">오레오</button>
+                            <button type="button">대상</button>
+                            <button type="button">큐팜스</button>
+                            <button type="button">네슬레</button>
+                            <button type="button">선인</button>
+                            <button type="button">아레스</button>
+                            <button type="button">메이토</button>
+                            <button type="button">다농원</button>
+                            <button type="button">스위트컵</button>
+                            <button type="button">로투스</button>
+                            <button type="button">까로망</button>
+                            <button type="button">앤드로스</button>
+                            <button type="button">복음자리</button>
+                            <button type="button">아크바</button>
+                            <button type="button">모카페</button>
+                        </div>
+                        <div class="cont">
+                            <button type="button">낱개</button>
+                            <button type="button">묶음</button>
+                            <button type="button">박스</button>
+                            <button type="button">모음</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="goods__filter" id="checked">
+                    <div class="cont">
+                    </div>
+                    <button class="reset-btn" onclick="deleteAll()">
+                        <i class="fas fa-undo"></i>
+                    </button>
+                </div>
+                <div class="goods__event-banner event-slide">
+                    <div class="slide">
+                        <ul>
+                            <li><a href="#;"><img src="img/banner/goods-1.jpg" alt="이벤트배너"></a></li>
+                            <li><a href="#;"><img src="img/banner/goods-2.jpg" alt="이벤트배너"></a></li>
+                            <li><a href="#;"><img src="img/banner/goods-3.jpg" alt="이벤트배너"></a></li>
+                        </ul>
+                    </div>
+                    <ul class="pagination">
+                        <li><button type="button" class="dot active"></button></li>
+                        <li><button type="button" class="dot"></button></li>
+                        <li><button type="button" class="dot"></button></li>
+                    </ul>
+                </div>
+                <div class="goods__list">
+                    <div class="list-pick">
+                        <div class="pick-item">
+                            <select class="pick-select">
+                                <option>판매인기순</option>
+                                <option>낮은가격순</option>
+                                <option>높은가격순</option>
+                                <option>상품평순</option>
+                                <option>등록일순</option>
+                            </select>
+                            <div class="view-item-num">
+                                <button type="button" class="view-row"><i class="fas fa-th-list"></i></button>
+                                <button type="button" class="view-column active"><i class="fas fa-th-large"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-box column"> <!-- 아이템정렬타입 변경 row / column -->
+                        <div class="list-item sale-event">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-1.jpg" alt="빅트레인 바닐라 라떼 1.59kg"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">빅트레인 바닐라 라떼 1.59kg</p>
+                                        <span class="goods-price">
+                                            <s>32,700</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>29,900</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text">
+                                <span class="event-text">특/별/할/인</span>
+                                <span class="event-price"><b>29,900</b>원</span>
+                            </div>
+                        </div>
+                        <div class="list-item sale-event">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-2.jpg" alt="세미 베버시티 고구마라떼 페에스트 1kg"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">세미 베버시티 고구마라떼 페에스트 1kg</p>
+                                        <span class="goods-price">
+                                            <s>7,000</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>6,800</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text red">
+                                <p>세미 베버시티 제주 20 말차 30g 증정!</p>
+                                <span>(행사물량 재고소진시 까지)</span>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-3.jpg" alt="립톤 복숭아맛 907g"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">립톤 복숭아맛 907g</p>
+                                        <span class="goods-price">
+                                            <s>7,700</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>6,280</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text"></div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-4.jpg" alt="세미 베버시티 고구마라떼 페이스트(스틱) 80g 12개입/1팩"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">세미 베버시티 고구마라떼 페이스트(스틱) 80g 12개입/1팩</p>
+                                        <span class="goods-price">
+                                            <s>10,000</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>9,600</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text"></div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-5.jpg" alt="기라델리 프리미엄 핫코코아 믹스 907g"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">기라델리 프리미엄 핫코코아 믹스 907g</p>
+                                        <span class="goods-price">
+                                            <s>16,500</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>15,900</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text"></div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-6.jpg" alt="세미 베버시티 녹차라떼 500g"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">세미 베버시티 녹차라떼 500g</p>
+                                        <span class="goods-price">
+                                            <s>8,000</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>6,800</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text"></div>
+                        </div>
+                        <div class="list-item sale-event">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-7.jpg" alt="아임요 요거에스 플레인 1kg"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">아임요 요거에스 플레인 1kg</p>
+                                        <span class="goods-price">
+                                            <s>12,000</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>8,500</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text">
+                                <span class="event-text">특/별/할/인</span>
+                                <span class="event-price"><b>8,500</b>원</span>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-8.jpg" alt="빅트레인 토피모카(토피넛) 1.59kg"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">빅트레인 토피모카(토피넛) 1.59kg</p>
+                                        <span class="goods-price">
+                                            <s>32,700</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>29,900</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text"></div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-9.jpg" alt="포모나 코코렛 파우더 800g"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">포모나 코코렛 파우더 800g</p>
+                                        <span class="goods-price">
+                                            <s>7,000</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>5,610</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text"></div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-10.jpg" alt="베오베 오곡 파우더 1kg"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">베오베 오곡 파우더 1kg</p>
+                                        <span class="goods-price">
+                                            <s>7,500</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>6,900</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text"></div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-11.jpg" alt="베오베 시나몬 토핑용 파우더 165g"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">베오베 시나몬 토핑용 파우더 165g</p>
+                                        <span class="goods-price">
+                                            <s>6,500</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>5,500</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text"></div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-12.jpg" alt="빅트레인 바닐라 크림 1.59kg"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">빅트레인 바닐라 크림 1.59kg</p>
+                                        <span class="goods-price">
+                                            <s>32,700</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>29,900</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text"></div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-13.jpg" alt="타코 카페 초콜릿 1kg"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">타코 카페 초콜릿 1kg</p>
+                                        <span class="goods-price">
+                                            <s>9,000</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>6,500</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text"></div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-14.jpg" alt="세미 베버시티 홍차라떼 얼그레이 500g"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">세미 베버시티 홍차라떼 얼그레이 500g</p>
+                                        <span class="goods-price">
+                                            <s>9,900</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>9,000</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text"></div>
+                        </div>
+                        <div class="list-item sale-event">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-15.jpg" alt="오레오 화이트 크림 100g(50g/2개)"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">오레오 화이트 크림 100g(50g/2개)</p>
+                                        <span class="goods-price">
+                                            <s>2,250</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>1,080</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text">
+                                <span class="event-text">특/별/할/인</span>
+                                <span class="event-price"><b>1,080</b>원</span>
+                            </div>
+                        </div>
+                        <div class="list-item sale-event">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-16.jpg" alt="타코 녹차라떼 500g"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">타코 녹차라떼 500g</p>
+                                        <span class="goods-price">
+                                            <s>8,000</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>5,450</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text">
+                                <span class="event-text">특/별/할/인</span>
+                                <span class="event-price"><b>5,450</b>원</span>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-17.jpg" alt="포모나 제주봄빛 말차 파우더 500g"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">포모나 제주봄빛 말차 파우더 500g</p>
+                                        <span class="goods-price">
+                                            <s>15,400</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>12,900</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text"></div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-18.jpg" alt="빅트레인 핫섬머 쑥 라떼 500g"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">빅트레인 핫섬머 쑥 라떼 500g</p>
+                                        <span class="goods-price">
+                                            <s>15,400</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>12,900</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text"></div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-19.jpg" alt="타코 고구마라뗴 870g"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">타코 고구마라뗴 870g</p>
+                                        <span class="goods-price">
+                                            <s>15,400</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>12,900</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text"></div>
+                        </div>
+                        <div class="list-item">
+                            <div class="item-wrap">
+                                <a href="goods-view.html">
+                                    <div class="goods__img">
+                                        <img src="img/goods/goods-list-20.jpg" alt="오레오 쿠키 크럼(분태) 800g"/>    
+                                    </div>
+                                    <div class="goods__text">
+                                        <p class="goods-name">오레오 쿠키 크럼(분태) 800g</p>
+                                        <span class="goods-price">
+                                            <s>15,400</s> (정가)
+                                        </span>
+                                        <span class="goods-sale">
+                                            <b>12,900</b> (판매가)
+                                        </span>
+                                    </div>
+                                </a>
+                                <button type="button" class="goods-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                            <div class="goods__sale-text"></div>
+                        </div>
+                    </div>
+                    <div class="list-box-more">
+                        <button type="button" onclick="goodsMore()">더보기 +</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- container - e -->
+    <footer id="footer"></footer>
+    <!-- footer - e -->
+
+
+    <!-- js -->
+    <script src="https://kit.fontawesome.com/3701dcbbf4.js" crossorigin="anonymous" ></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    
+    <script src="./js/index.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/goods.js"></script>
+
+</body>
+</html>

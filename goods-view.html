@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/reset.css">
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <title>상품 상세보기</title>
+</head>
+<body>
+    <header id="header"></header>
+    <!-- header - e -->
+    <div id="container" class="goods-view">
+        <div class="location">
+            <div class="wrapper">
+                <a href="goods-view.html" class="location-link">앤틱 크라프트 캐리어 50개</a>
+            </div>
+        </div>
+        <section class="section-info">
+            <div class="goods__photo-info wrapper">
+                <div class="item-img">
+                    <div class="img-main">
+                        <img src="img/goods/goods-view-1.jpg" class="active" alt="앤틱 크라프트 캐리어"/>
+                        <img src="img/goods/goods-view-2.jpg" alt="앤틱 크라프트 캐리어"/>
+                        <img src="img/goods/goods-view-3.jpg" alt="앤틱 크라프트 캐리어"/>
+                        <img src="img/goods/goods-view-4.jpg" alt="앤틱 크라프트 캐리어"/>
+                    </div>
+                    <ul class="pagination">
+                        <li><button type="button" class="dot active"></button></li>
+                        <li><button type="button" class="dot"></button></li>
+                        <li><button type="button" class="dot"></button></li>
+                        <li><button type="button" class="dot"></button></li>
+                    </ul>
+                </div>
+                <div class="item-info">
+                    <div class="info-table">
+                        <div class="row">
+                            <div class="sales_price">
+                                <input type="hidden" class="p_price" value="11500" >
+                                <b>11,500</b>원
+                            </div>
+                            <div class="list_price">
+                                13,000원
+                            </div >
+                            <button class="wish-btn" onclick="wishToggle(event)"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="row">
+                            <div class="coupon">
+                                <img src="img/coupon.png" alt="사용가능한 할인 쿠폰이 있습니다." />
+                                <input type="hidden" class="coupon_p" value="2000">
+                                <p><b>2,000원</b> 할인 <small>(2022-12-30까지 사용가능)</small></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h4 class="title-span">다른 판매단위</h4>
+                            <div class="unit">
+                                <a href="#;">
+                                    <img src="img/goods/goods-view-1.jpg" alt="앤틱 크라프트 캐리어" />
+                                    <span class="2ea">x100EA</span>
+                                </a>
+                                <a href="#;">
+                                    <img src="img/goods/goods-view-1.jpg" alt="앤틱 크라프트 캐리어" />
+                                    <span class="box">BOX</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fixed-nav">
+                        <div class="order-cont">
+                            <button type="button" class="down-btn" onclick="closeCalc()">
+                                <img src="img/icon_arrow_down.png" alt="닫기"/>
+                            </button>
+                            <div class="add-product">
+                                <div>
+                                    <select id="add-select" name="add" onchange="javascript:calc.addItem()">
+                                        <option>추가상품 선택안함</option>
+                                        <option>[추가상품] 커피잔 브라운 디자인 캐리어 25개</option>
+                                        <option>[추가상품] 커피잔 블랙 디자인 캐리어 25개</option>
+                                    </select>
+                                </div>
+                                <p>선택한 옵션에 따라 가격이 달라질 수 있습니다.</p>
+                            </div>
+                            <div class="item-total">
+                                <div class="total-item">
+                                    <div class="selected-item">
+                                        <span class="name">앤틱 크라프트 캐리어 50개</span>
+                                        <div class="num">
+                                            <span onclick="javascript:calc.changePNum()" class="minus"><i class="fas fa-minus down"></i></span>
+                                            <input type="number" class="item_num" name="item_num" min="1" max="10" value="1" onkeyup="javascript:calc.changePNum();">
+                                            <span onclick="javascript:calc.changePNum()" class="plus"><i class="fas fa-plus up"></i></span>
+                                        </div>
+                                        <span class="price">
+                                            <input type="hidden" class="item_p" value="11500">
+                                            <span><b>11,500</b>원</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div id="total-price">
+                                    총 합계금액
+                                    <span><b>11,500</b>원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-tab">
+                            <button class="cart-btn" onclick="openCalc()">장바구니 담기</button>
+                            <button class="order-btn" onclick="openCalc()">구매</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="delivery-banner">
+                    <h4 class="title-span">배송안내</h4>
+                    <div class="deli-type thunder">
+                        <img src="img/icn_lightning.png" alt="사업자특송 번개배송"/>
+                        <span>사업자특성(번개배송)으로 지금 주문하시면, <b>내일</b> 도착</span>
+                    </div>
+                    <div class="deli-type cj">
+                        <img src="img/icn_cj.png" alt="CJ대한통운" />
+                        <span>CJ대한통운으로 지금 주문하시면, <b>내일</b> 출고</span>
+                    </div>
+                </div>
+            </div>
+            <div class="goods__recommend">
+                <div class="wrapper">
+                    <h4 class="title-span">추천상품</h4>
+                    <ul class="recommend-list show3">
+                        <li>
+                            <a href="#;">
+                                <img src="img/goods/goods-recom-1.jpg" alt="추천상품: 커피잔 블랙 디자인 캐리어 25개" />
+                                <div class="text">커피잔 블랙 디자인 캐리어 25개</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#;">
+                                <img src="img/goods/goods-recom-2.jpg" alt="추천상품: [크라프트] 거리풍경 캐리어 25개" />
+                                <div class="text">[크라프트] 거리풍경 캐리어 25개</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#;">
+                                <img src="img/goods/goods-recom-3.jpg" alt="추천상품: 밴드 캐리어 마블 1롤 (250EA)" />
+                                <div class="text">밴드 캐리어 마블 1롤 (250EA)</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#;">
+                                <img src="img/goods/goods-recom-4.jpg" alt="추천상품: [업체발송] 샘플키트(3구 캐리어 4개 + 홀더 8개)" />
+                                <div class="text">[업체발송] 샘플키트(3구 캐리어 4개 + 홀더 8개)</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#;">
+                                <img src="img/goods/goods-recom-5.jpg" alt="추천상품: 커피잔 브라운 디자인 캐리어 25개" />
+                                <div class="text">커피잔 브라운 디자인 캐리어 25개</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#;">
+                                <img src="img/goods/goods-recom-6.jpg" alt="추천상품: 밴드 캐리어 투명 1롤 (250EA)" />
+                                <div class="text">밴드 캐리어 투명 1롤 (250EA)</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#;">
+                                <img src="img/goods/goods-recom-7.jpg" alt="추천상품: 인쇄 비닐캐리어(2구) 200장" />
+                                <div class="text">인쇄 비닐캐리어(2구) 200장</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#;">
+                                <img src="img/goods/goods-recom-8.jpg" alt="추천상품: 뉴욕 디자인 캐리어 25개" />
+                                <div class="text">뉴욕 디자인 캐리어 25개</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="more" onclick="moreItem(event)"><i class="fas fa-chevron-down"></i></button>
+                </div>
+            </div>
+        </section>
+        <section class="section-item">
+            <div id="item-details">
+                <div class="details wrapper">
+                    <h4 class="title-span">상세보기</h4>
+                    <div class="details-img"><img src="img/goods/goods-detail.jpg" alt="상세페이지" /></div>
+                    <button class="details-more-btn" type="button">상세정보 펼쳐보기</button>
+                    <div class="details-product-info">
+                        <button type="button" class="details-info-btn">상품필수 정보</button>
+                        <div class="details-info-table active">
+                            <p>
+                                <span>식품유형</span><br>
+                                가공품
+                            </p>
+                            <p>
+                                <span>내용량</span><br>
+                                1.59kg
+                            </p>
+                            <p>
+                                <span>제조원</span><br>
+                                그나월드
+                            </p>
+                            <p>
+                                <span>제조국</span><br>
+                                그나섬
+                            </p>
+                            <p>
+                                <span>수입원</span><br>
+                                그나무역
+                            </p>
+                            <p>
+                                <span>원재료명 및 함량</span><br>
+                                설탕, 코코넛오일, 콘시럽고형분, 무지방우유, 커피, 천연바닐라향, 합성향료(바닐라원), 글리세린지방산에스테르, 카라기난,대두레시틴
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="item-review">
+                <div class="details-tit wrapper">
+                    <h4 class="title-span">상품평 (3)</h4>
+                    <button type="button">상품평 쓰기</button>
+                </div>
+                <div class="details wrapper">
+                    <div class="view">
+                        <span class="name">고객명</span>
+                        <span class="date">2021.12.28</span>
+                        <p>좋아요~ 잘 쓸게요 ~</p>
+                    </div>
+                    <div class="view">
+                        <span class="name">고객명</span>
+                        <span class="date">2021.12.15</span>
+                        <p>휴대가 편하고 좋아요</p>
+                    </div>
+                    <div class="view">
+                        <span class="name">고객명</span>
+                        <span class="date">2021.11.30</span>
+                        <p>배송도 빠르고 활용도가 아주 좋아용</p>
+                    </div>
+                </div>
+            </div>
+            <div id="item-qna">
+                <div class="details-tit wrapper">
+                    <h4 class="title-span">상품문의 (1)</h4>
+                    <button type="button">문의하기</button>
+                </div>
+                <div class="details wrapper">
+                    <div class="view">
+                        <i class="icon">답변완료</i>
+                        <span class="name">고객명</span>
+                        <span class="date">2021.11.20</span>
+                        <p>음료용량은 얼마까지 견딜 수 있을까요?</p>
+                    </div>
+                </div>
+            </div>
+            <div id="item-order-qna">
+                <div class="wrapper">
+                    <h4 class="title-span">교환 및 반품 안내</h4>
+                    <p class="text-box">
+                        <strong>반품, 교환이 불가능한 경우 안내</strong>
+                        ① 식품의 경우 수령 후 7일/용품의 경우 수령 후 30일 결과한 상품<br>
+                        ② 상품 수령 후 고객님의 책임있는 사유로 상품등이 멸실 또는 훼손된 경우<br>
+                        ③ 고객님의 사용 또는 일부 소비에 의해 상품의 가치가 현저히 감소한 경우<br>
+                        ④ 시간의 경과에 의하여 재판매가 어려울 정도로 상품 가치가 현저히 감소한 경우<br>
+                        ⑤ 포장 개봉 및 상품 택(tag)이나 증명서등을 분리, 제거, 훼손한 경우<br>
+                        ⑥ 상품 자체 케이스(겉포장) 손상시
+                    </p>
+                    <p class="text-box">
+                        <strong>단순 변심에 의한 교화/반품비용 안내</strong>
+                        ① 상품하자, 오배송으로 인한 반품은 100% 환불보장<br>
+                        ② 박스상품의 경우 반품(예시)<br>
+                        <span>ㄴ 출고시 배송비(3박스x3,000원) + 회수시 배송비(3박스 x 3,000원) = 18,000원</span><br>
+                        ③ 박스상품 교화(주문금액 3만원 미만)시 재출고에 의한 배송비가 박스별로 3,000원 추가발생<br>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- container - e -->
+    <footer id="footer"></footer>
+    <!-- footer - e -->
+
+
+    <!-- js -->
+    <script src="https://kit.fontawesome.com/3701dcbbf4.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    
+    <script src="./js/index.js"></script>
+    <script src="./js/goods-view.js"></script>
+</body>
+</html>
